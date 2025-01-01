@@ -43,8 +43,11 @@ if result['weeks'] > 0:
     output.append(f"{result['weeks']} weeks")
 if result['days'] > 0:
     output.append(f"{result['days']} days")
-output.append(f"{result['hours']} hours")
-output.append(f"{result['minutes']} minutes")
-output.append(f"{result['seconds']} seconds")
+if result['hours'] > 0:
+    output.append(f"{result['hours']} hours")
+if result['minutes'] > 0:
+    output.append(f"{result['minutes']} minutes")
+if result['seconds'] > 0:
+    output.append(f"{result['seconds']} seconds")
 
-print("Time spent in the new year: " + ", ".join(output))
+print("\033[92mTime spent in the new year: \033[00m \033[93m" + ", ".join(output),"\033[00m")
