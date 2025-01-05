@@ -87,7 +87,6 @@ remarks = input("Enter your remarks: ")
 data = {
     "timestamp": datetime.now().isoformat(),
     "details": ', '.join(output),
-    "progress_bar": f"[{progress_bar}]",
     "year_percentage": result['year_percentage'],
     "remarks": remarks
 }
